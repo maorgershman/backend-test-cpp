@@ -50,9 +50,9 @@ namespace database
 
   void Pool::release(std::shared_ptr<pqxx::connection> conn)
   {
-    std::lock_guard<std::mutex> lock(mtx);
-    connections.push(std::move(conn));
-    cv.notify_one(); // Notify a waiting thread, if any
+    std::lock_guard<std::mutex> lock(this->mtx);
+    this->connections.push(std::move(conn));
+    this->cv.notify_one(); // Notify a waiting thread, if any
   }
 
   //

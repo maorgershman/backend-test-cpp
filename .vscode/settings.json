@@ -1,7 +1,13 @@
 {
   "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
   "cmake.debugConfig": {
-    "cwd": "${workspaceFolder}"
+    "cwd": "${workspaceFolder}",
+    "environment": [
+      {
+        "name": "ENV",
+        "value": "development"
+      }
+    ]
   },
   "files.associations": {
     "pqxx": "cpp",
@@ -91,6 +97,10 @@
     "xutility": "cpp",
     "*.ipp": "cpp",
     "deque": "cpp",
-    "queue": "cpp"
+    "queue": "cpp",
+    "random": "cpp",
+    "regex": "cpp",
+    "unordered_set": "cpp",
+    "string_view": "cpp"
   }
 }
