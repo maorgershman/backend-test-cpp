@@ -2,9 +2,16 @@
 
 #include <string>
 
-namespace env 
+namespace env
 {
-  using EnvData = struct {};
+  struct EnvData
+  {
+    struct
+    {
+      std::string name, host, user, password;
+      int poolSize;
+    } db;
+  };
 
   extern EnvData data;
 
